@@ -8,14 +8,10 @@
 ---
 
 ## 🖥 Preview 
-
-<details>
-  <summary>Clique para ver a imagem!</summary>
   
   ![](/images/calculator.png)
   
-</details>
----
+
 
 ## 📖 Sobre 
 
