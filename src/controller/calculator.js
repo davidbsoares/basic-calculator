@@ -4,10 +4,7 @@ class Calculator {
         this.currentOperandTextElement = currentOperandTextElement;
         this.readyToReset = false;
         this.clear();
-    }
-
-
-    
+    }    
 
     clear() {
         this.currentOperand = "";
@@ -92,12 +89,9 @@ class Calculator {
             `${this.previousOperand} ${this.operation}`;
         } else {
             this.previousOperandTextElement.innerText = ''
-        }
-        
-    }        
-    
+        }        
+    }    
 }
-
 
 const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
@@ -112,9 +106,6 @@ const calcBody = document.querySelector(".calculator-grid")
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
 
-/* Transformar tudo isso aqui em métodos na classe de cima e fazer um initKeyboard */
-
-
 numberButtons.forEach(button => {
     button.addEventListener("click", () => {
 
@@ -124,12 +115,10 @@ numberButtons.forEach(button => {
                 calculator.currentOperand = "";
                 calculator.readyToReset = false;
         }
-
         
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay();
-    })
-    
+    })    
 })
 
 
@@ -156,6 +145,3 @@ deleteButton.addEventListener('click', button =>{
     calculator.delete()
     calculator.updateDisplay()
 })
-
-
-
